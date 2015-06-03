@@ -3,8 +3,8 @@ var CommonsChunkPlugin = require("../../lib/optimize/CommonsChunkPlugin");
 module.exports = {
 	entry: {
 		// The entry points for the pages
-		pageA: "./aEntry",
-		pageB: "./bEntry",
+		// pageA: "a/aEntry",
+		// pageB: "b/bEntry",
 
 		// This file contains common modules but also the router entry
 		"commons.js": "./router"

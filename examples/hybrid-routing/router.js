@@ -1,4 +1,4 @@
-var render = require("./render");
+var render = require("render/render");
 
 // Event when another page should be opened
 // Maybe hook click on links, hashchange or popstate
@@ -15,7 +15,7 @@ window.onLinkToPage = function onLinkToPage(name) { // name is "a" or "b"
 	//  -> Pages are only loaded on demand
 
 	// This line may throw a exception on runtime if the page wasn't found.
-	var pageBundle = require("bundle!./" + name + "Page");
+	var pageBundle = require("bundle!" + name + "/" + name + "Page");
 
 	// Wait until the chunk is loaded
 	pageBundle(function(page) {
